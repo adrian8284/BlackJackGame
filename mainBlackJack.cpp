@@ -1,10 +1,15 @@
 #include <iostream>
 #include <string>
 #include <cstdlib>
-#include <ctime>
+#include <ctime> //unneeded
 #include <vector>
+
 #include <thread>
 #include <chrono>
+
+#include <algorithm>
+#include <random>
+#include <ctime>
 
 using namespace std;
 
@@ -374,47 +379,3 @@ string playBlackJack()
 
     return result;
 }
-
-// future deck improvement::
-
-/*
-// Map card names to their corresponding values
-map<string, int> cardValues = {
-    {"A♠", 11}, {"2♠", 2}, {"3♠", 3}, {"4♠", 4}, {"5♠", 5}, {"6♠", 6}, {"7♠", 7}, {"8♠", 8}, {"9♠", 9}, {"10♠", 10}, {"J♠", 10}, {"Q♠", 10}, {"K♠", 10},
-    {"A♥", 11}, {"2♥", 2}, {"3♥", 3}, {"4♥", 4}, {"5♥", 5}, {"6♥", 6}, {"7♥", 7}, {"8♥", 8}, {"9♥", 9}, {"10♥", 10}, {"J♥", 10}, {"Q♥", 10}, {"K♥", 10},
-    {"A♦", 11}, {"2♦", 2}, {"3♦", 3}, {"4♦", 4}, {"5♦", 5}, {"6♦", 6}, {"7♦", 7}, {"8♦", 8}, {"9♦", 9}, {"10♦", 10}, {"J♦", 10}, {"Q♦", 10}, {"K♦", 10},
-    {"A♣", 11}, {"2♣", 2}, {"3♣", 3}, {"4♣", 4}, {"5♣", 5}, {"6♣", 6}, {"7♣", 7}, {"8♣", 8}, {"9♣", 9}, {"10♣", 10}, {"J♣", 10}, {"Q♣", 10}, {"K♣", 10}
-};
-
-int main() {
-    // Initialize deck with all cards
-    vector<string> deck = {
-        "A♠", "2♠", "3♠", "4♠", "5♠", "6♠", "7♠", "8♠", "9♠", "10♠", "J♠", "Q♠", "K♠",
-        "A♥", "2♥", "3♥", "4♥", "5♥", "6♥", "7♥", "8♥", "9♥", "10♥", "J♥", "Q♥", "K♥",
-        "A♦", "2♦", "3♦", "4♦", "5♦", "6♦", "7♦", "8♦", "9♦", "10♦", "J♦", "Q♦", "K♦",
-        "A♣", "2♣", "3♣", "4♣", "5♣", "6♣", "7♣", "8♣", "9♣", "10♣", "J♣", "Q♣", "K♣"
-    };
-
-    // Shuffle the deck
-    srand(time(0));
-    random_shuffle(deck.begin(), deck.end());
-
-    // Deal two cards to the player
-    cout << "Dealing two cards to the player: \n";
-    string card1 = deck.back();
-    deck.pop_back();
-    string card2 = deck.back();
-    deck.pop_back();
-
-    cout << card1 << " and " << card2 << "\n";
-
-    // Get the value of the cards from the map
-    int card1Value = cardValues[card1];
-    int card2Value = cardValues[card2];
-
-    cout << "The value of " << card1 << " is " << card1Value << "\n";
-    cout << "The value of " << card2 << " is " << card2Value << "\n";
-
-    return 0;
-}
-*/
